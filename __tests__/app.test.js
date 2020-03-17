@@ -29,7 +29,8 @@ describe('app routes', () => {
           'mix ingredients',
           'put dough on cookie sheet',
           'bake for 10 minutes'
-        ]
+        ],
+        ingredients: [{ amount: 20, measurement: 'teaspoon', name: 'flour' }]
       })
       .then(res => {
         expect(res.body).toEqual({
@@ -41,6 +42,7 @@ describe('app routes', () => {
             'put dough on cookie sheet',
             'bake for 10 minutes'
           ],
+          ingredients: [{ _id: expect.any(String), amount: 20, measurement: 'teaspoon', name: 'flour' }],
           __v: 0
         });
       });
@@ -74,6 +76,7 @@ describe('app routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [{ amount: 20, measurement: 'teaspoon', name: 'flour' }]
     });
 
     return request(app)
@@ -88,6 +91,7 @@ describe('app routes', () => {
             'put dough on cookie sheet',
             'bake for 10 minutes'
           ],
+          ingredients: [{ _id: expect.any(String), amount: 20, measurement: 'teaspoon', name: 'flour' }],
           __v: 0
         });
       });
@@ -102,6 +106,7 @@ describe('app routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [{ amount: 20, measurement: 'teaspoon', name: 'flour' }]
     });
 
     return request(app)
@@ -117,6 +122,7 @@ describe('app routes', () => {
             'put dough on cookie sheet',
             'bake for 10 minutes'
           ],
+          ingredients: [{ _id: expect.any(String), amount: 20, measurement: 'teaspoon', name: 'flour' }],
           __v: 0
         });
       });
@@ -131,6 +137,7 @@ describe('app routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [{ amount: 20, measurement: 'teaspoon', name: 'flour' }]
     });
 
     return request(app)
@@ -145,6 +152,7 @@ describe('app routes', () => {
             'put dough on cookie sheet',
             'bake for 10 minutes'
           ],
+          ingredients: [{ _id: expect.any(String), amount: 20, measurement: 'teaspoon', name: 'flour' }],
           __v: 0
         });
       });
